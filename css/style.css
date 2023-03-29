@@ -136,13 +136,11 @@ img {
   max-width: 100%;
 }
 
-button,
-input[type=submit] {
+button {
   cursor: pointer;
   border-radius: 50rem;
 }
-button.submit,
-input[type=submit].submit {
+button.submit {
   width: 100%;
   background-color: #353B50;
   color: #F6F6F6;
@@ -153,29 +151,12 @@ input[type=submit].submit {
   line-height: 3rem;
   transition: background-color 0.15s ease-in-out;
 }
-button.submit:hover,
-input[type=submit].submit:hover {
+button.submit:hover {
   background-color: #1E2333;
 }
 
 form {
   margin-top: 2rem;
-}
-form input {
-  border-radius: 50rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  line-height: 1.4rem;
-  outline: none;
-}
-form input::-moz-placeholder {
-  color: #353B50;
-}
-form input::placeholder {
-  color: #353B50;
-}
-form input:focus {
-  border-color: #1E2333;
 }
 form label {
   display: flex;
@@ -185,37 +166,37 @@ form label {
   font-weight: 700;
   margin-bottom: 1rem;
 }
-form label span,
-form label input {
+form label span {
   flex: 100%;
 }
 form label input {
+  flex: 100%;
   background-color: #F6F6F6;
   border: 1px solid #DDDDDD;
+  border-radius: 50rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+  outline: none;
 }
-form .submit {
+form label input::-moz-placeholder {
+  color: #353B50;
+}
+form label input::placeholder {
+  color: #353B50;
+}
+form label input:focus {
+  border-color: #1E2333;
+}
+form .notice {
   margin-top: 2rem;
 }
-form .submit span {
+form .notice span {
   font-size: 0.875rem;
   color: #E72E6B;
 }
-form .submit button,
-form .submit input[type=submit] {
-  width: 100%;
+form .notice button {
   margin-top: 0.5rem;
-  background-color: #353B50;
-  color: #F6F6F6;
-  border: none;
-  padding: 0;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 3rem;
-  border-radius: 50rem;
-}
-form .submit button:hover,
-form .submit input[type=submit]:hover {
-  background-color: #1E2333;
 }
 
 header {

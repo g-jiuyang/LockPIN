@@ -28,8 +28,7 @@ img {
 }
 
 // components
-button,
-input[type=submit] {
+button {
     cursor: pointer;
     border-radius: 50rem;
 
@@ -53,22 +52,6 @@ input[type=submit] {
 form {
     margin-top: 2rem;
 
-    input {
-        border-radius: 50rem;
-        padding: 0.5rem 1rem;
-        font-size: 0.875rem;
-        line-height: 1.4rem;
-        outline: none;
-
-        &::placeholder {
-            color: map-get($color, primary-light);
-        }
-
-        &:focus {
-            border-color: map-get($color, primary);
-        }
-    }
-
     label {
         display: flex;
         flex-wrap: wrap;
@@ -77,18 +60,31 @@ form {
         font-weight: 700;
         margin-bottom: 1rem;
 
-        span,
-        input {
+        span {
             flex: 100%;
         }
 
         input {
+            flex: 100%;
             background-color: map-get($color, grey-bg);
             border: 1px solid map-get($color, grey-light);
+            border-radius: 50rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            line-height: 1.4rem;
+            outline: none;
+
+            &::placeholder {
+                color: map-get($color, primary-light);
+            }
+
+            &:focus {
+                border-color: map-get($color, primary);
+            }
         }
     }
 
-    .submit {
+    .notice {
         margin-top: 2rem;
 
         span {
@@ -96,22 +92,8 @@ form {
             color: map-get($color, main);
         }
 
-        button,
-        input[type=submit] {
-            width: 100%;
+        button {
             margin-top: 0.5rem;
-            background-color: map-get($color, primary-light);
-            color: map-get($color, grey-bg);
-            border: none;
-            padding: 0;
-            font-size: 1rem;
-            font-weight: 700;
-            line-height: 3rem;
-            border-radius: 50rem;
-
-            &:hover {
-                background-color: map-get($color, primary);
-            }
         }
     }
 }
