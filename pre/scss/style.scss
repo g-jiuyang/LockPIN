@@ -52,7 +52,7 @@ button {
         padding: 0;
         font-size: 1rem;
         font-weight: 700;
-        line-height: 3rem;
+        line-height: 3.125rem;
         transition: background-color .15s ease-in-out;
 
         &:hover {
@@ -81,9 +81,9 @@ form {
             background-color: map-get($color, grey-bg);
             border: 1px solid map-get($color, grey-light);
             border-radius: 50rem;
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            line-height: 1.4rem;
+            padding: 0 1rem;
+            font-size: 1rem;
+            line-height: 3rem;
             outline: none;
 
             &::placeholder {
@@ -128,6 +128,7 @@ header {
 
 main {
     padding-top: 4.8rem;
+    min-height: calc(100svh - 5.25rem);
 
     .card {
         background-color: map-get($color, grey-white);
@@ -329,24 +330,8 @@ footer {
             }
         }
 
-        .popUp--submit {
-            position: relative;
-            display: inline-block;
-            height: 2.5rem;
-            width: 100%;
+        .submit {
             margin-top: 1.75rem;
-            border-radius: 1.5rem;
-            border: none;
-            font-weight: 700;
-            line-height: 2.5rem;
-            background-color: map-get($color, primary-light);
-            color: map-get($color, grey-bg);
-            font-size: 0.8rem;
-            transition: background-color .15s ease-in-out;
-
-            &:hover {
-                background-color: map-get($color, primary);
-            }
         }
     }
 
@@ -416,7 +401,6 @@ footer {
 
     main {
         padding: 1.75rem 1.25rem;
-        min-height: calc(100svh - 5rem);
 
         .card {
             flex-wrap: wrap;
@@ -442,8 +426,8 @@ footer {
                 }
             }
 
-            .notice {
-                padding-top: 1.25rem;
+            .confirm {
+                margin-top: 1.5rem;
 
                 h4 {
                     font-size: 1.25rem;
@@ -460,7 +444,7 @@ footer {
                 }
 
                 p {
-                    font-size: 0.875rem;
+                    font-size: 1rem;
                     line-height: 160%;
                 }
             }
