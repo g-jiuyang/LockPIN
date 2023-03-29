@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LockPIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href=""><img src="images/GASH.svg"></a>
+    </header>
+
+    <main>
+        <section class="card">
+            <div class="receipt">
+                <p>❗️請備妥購買點數時的小白單❗️</p>
+                <img src="images/receipt.jpg">
+            </div>
+            <div class="lock">
+                <h2>防詐騙頁面標題</h2>
+                <p>親愛的顧客，提醒您，【臺灣藍鵲茶/石虎米】不會以任何名義或緣由向您索取或核對金融帳戶、信用卡等個人資訊，也絕不會主動要求顧客前往臨櫃或操作 ATM
+                    進行如匯款、退款、補繳金額等金融操作行為。若接獲可疑電話或簡訊，敬請提高警覺，切勿輕信不明來電指示。</p>
+                <form action="javascript:void(0);">
+                    <label>
+                        <span>SN 碼</span>
+                        <input type="text" name="sn" placeholder="請輸入SN碼">
+                    </label>
+                    <label>
+                        <span>PIN 碼</span>
+                        <input type="text" name="pin" placeholder="請輸入PIN碼">
+                    </label>
+                    <div class="submit">
+                        <span>* 鎖定失敗：點數已被使用，無法鎖定</span>
+                        <!-- <span>* 鎖定失敗：點數已於x月x日完成鎖定</span> -->
+                        <!-- <span>* 鎖定失敗：查無此點數序號，請重新確認輸入資料是否正確</span> -->
+                        <input id="confirm--open" type="submit" value="確認鎖定">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <strong>© 2023 GASH POINT Co., Ltd. All right reserved</strong> <br>
+            商家名稱：樂點股份有限公司 | 統一編號：53209324
+        </div>
+    </footer>
+
+    <div id="confirm--popUp" class="popUp popUp__button">
+        <div class="popUp--container">
+            <button id="confirm--close" class="popUp--close"><img src="images/icon-minus.svg"></button>
+            <h2>請注意</h2>
+            <div class="popUp--content">
+                <p>點數商品一經鎖定則無法再進行使用，您僅可攜帶購買憑證及證明至原購買地點辦理退費。</p>
+            </div>
+            <button id="confirm--submit" class="popUp--submit" onclick="location.href='success.html'">確認鎖定</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // confirm pop up
+        $('#confirm--open').click(function () {
+            $('#confirm--popUp').addClass('active')
+        })
+        $('#confirm--close').click(function () {
+            $('#confirm--popUp').removeClass('active')
+        })
+    </script>
+
+</body>
