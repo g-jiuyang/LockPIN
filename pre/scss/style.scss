@@ -104,6 +104,7 @@ form {
             font-size: 1rem;
             font-weight: 700;
             line-height: 3rem;
+            border-radius: 50rem;
 
             &:hover {
                 background-color: map-get($color, primary);

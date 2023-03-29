@@ -87,6 +87,7 @@ form .submit input[type=submit] {
   font-size: 1rem;
   font-weight: 700;
   line-height: 3rem;
+  border-radius: 50rem;
 }
 form .submit input[type=submit]:hover {
   background-color: #1E2333;
