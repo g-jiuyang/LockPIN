@@ -200,6 +200,7 @@ form .submit span {
   font-size: 0.875rem;
   color: #E72E6B;
 }
+form .submit button,
 form .submit input[type=submit] {
   width: 100%;
   margin-top: 0.5rem;
@@ -212,6 +213,7 @@ form .submit input[type=submit] {
   line-height: 3rem;
   border-radius: 50rem;
 }
+form .submit button:hover,
 form .submit input[type=submit]:hover {
   background-color: #1E2333;
 }
