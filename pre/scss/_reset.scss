@@ -79,11 +79,13 @@ body {
     line-height: 1;
 }
 
-ol,
 ul {
     list-style: none;
-    padding-left: 0;
     line-height: initial;
+}
+
+ol {
+    padding-left: 2rem;
 }
 
 blockquote,

@@ -16,6 +16,9 @@ $color: (
 // global
 * {
     box-sizing: border-box;
+    line-height: 160%;
+    color: map-get($color, primary-light);
+    font-family: 'PingFang', Arial, sans-serif;
 }
 
 body {
@@ -25,6 +28,15 @@ body {
 
 img {
     max-width: 100%;
+}
+
+a {
+    font-weight: 700;
+    transition: color .15s ease-in-out;
+
+    &:hover {
+        color: map-get($color, main);
+    }
 }
 
 // components
@@ -76,6 +88,7 @@ form {
 
             &::placeholder {
                 color: map-get($color, primary-light);
+                opacity: 0.5;
             }
 
             &:focus {
@@ -84,7 +97,7 @@ form {
         }
     }
 
-    .notice {
+    .confirm {
         margin-top: 2rem;
 
         span {
@@ -123,14 +136,22 @@ main {
         padding: 2.5rem 3.75rem;
         margin: 4.5rem auto;
         display: flex;
-        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 4rem 3.25rem;
+        align-items: center;
 
         .receipt {
-            flex: 44%;
-            padding-right: 3.25rem;
+            flex: 45%;
             text-align: center;
             font-size: 1.25rem;
             color: map-get($color, primary-light);
+            padding: 2rem;
+            background-color: map-get($color, grey-bg);
+            border-radius: 1.25rem;
+
+            p {
+                margin-bottom: 1rem;
+            }
 
             img {
                 border-radius: 1.25rem;
@@ -138,15 +159,43 @@ main {
         }
 
         .lock {
-            flex: 56%;
-            padding-left: 3.25rem;
-            border-left: 1px solid map-get($color, primary-light);
-            color: map-get($color, primary);
+            flex: calc(55% - 3.25rem);
 
             h2 {
                 font-size: 1.625rem;
                 font-weight: 700;
                 margin-bottom: 1rem;
+                color: map-get($color, primary);
+            }
+        }
+
+        .notice {
+            flex: 100%;
+
+            h4 {
+                font-size: 1.375rem;
+                text-align: center;
+                position: relative;
+                margin-bottom: 1rem;
+
+                &:before,
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    width: calc(50% - 2em - 1rem);
+                    height: 1px;
+                    background-color: map-get($color, primary-light);
+                    opacity: 0.5;
+                }
+
+                &:before {
+                    left: 0;
+                }
+
+                &:after {
+                    right: 0;
+                }
             }
         }
 
@@ -189,7 +238,7 @@ footer {
     width: 100%;
     border-top: 1px solid #D0D5DD;
     padding: 1.375rem 0;
-    color: #344054;
+    color: #345054;
 
     .copyright {
         width: max-content;
@@ -324,12 +373,13 @@ footer {
             padding: 2rem;
 
             .receipt {
-                padding-right: 2.25rem;
-                font-size: calc((((100svw - 6.5rem)*0.44) - 3rem)*0.07);
+                flex: 40%;
+                padding: 1.5rem;
+                font-size: calc((((100svw - 6.5rem)*0.45) - 3rem)*0.07);
             }
 
             .lock {
-                padding-left: 2.25rem;
+                flex: calc(60% - 3.25rem);
             }
         }
     }
@@ -373,11 +423,11 @@ footer {
             padding: 1.25rem;
             border-radius: 2rem;
             margin: 3.56rem 0 1.25rem;
+            gap: 1.25rem;
 
             .receipt {
                 font-size: calc((100svw - 5rem)*0.06);
-                padding: 0;
-                padding-bottom: 1.25rem;
+                padding: 1.25rem;
 
                 img {
                     max-width: 13rem;
@@ -385,14 +435,18 @@ footer {
             }
 
             .lock {
-                padding: 0;
-                padding-top: 1.25rem;
-                border-left: none;
-                border-top: 1px solid map-get($color, primary-light);
 
                 h2 {
                     margin: 0;
-                    font-size: 1.125rem;
+                    font-size: calc((100svw - 5rem)*0.08);
+                }
+            }
+
+            .notice {
+                padding-top: 1.25rem;
+
+                h4 {
+                    font-size: 1.25rem;
                 }
             }
 

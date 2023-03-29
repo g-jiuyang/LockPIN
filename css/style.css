@@ -79,11 +79,13 @@ body {
   line-height: 1;
 }
 
-ol,
 ul {
   list-style: none;
-  padding-left: 0;
   line-height: initial;
+}
+
+ol {
+  padding-left: 2rem;
 }
 
 blockquote,
@@ -125,6 +127,9 @@ button {
 /* styles */
 * {
   box-sizing: border-box;
+  line-height: 160%;
+  color: #353B50;
+  font-family: "PingFang", Arial, sans-serif;
 }
 
 body {
@@ -134,6 +139,14 @@ body {
 
 img {
   max-width: 100%;
+}
+
+a {
+  font-weight: 700;
+  transition: color 0.15s ease-in-out;
+}
+a:hover {
+  color: #E72E6B;
 }
 
 button {
@@ -181,21 +194,23 @@ form label input {
 }
 form label input::-moz-placeholder {
   color: #353B50;
+  opacity: 0.5;
 }
 form label input::placeholder {
   color: #353B50;
+  opacity: 0.5;
 }
 form label input:focus {
   border-color: #1E2333;
 }
-form .notice {
+form .confirm {
   margin-top: 2rem;
 }
-form .notice span {
+form .confirm span {
   font-size: 0.875rem;
   color: #E72E6B;
 }
-form .notice button {
+form .confirm button {
   margin-top: 0.5rem;
 }
 
@@ -221,28 +236,57 @@ main .card {
   padding: 2.5rem 3.75rem;
   margin: 4.5rem auto;
   display: flex;
-  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 4rem 3.25rem;
+  align-items: center;
 }
 main .card .receipt {
-  flex: 44%;
-  padding-right: 3.25rem;
+  flex: 45%;
   text-align: center;
   font-size: 1.25rem;
   color: #353B50;
+  padding: 2rem;
+  background-color: #F6F6F6;
+  border-radius: 1.25rem;
+}
+main .card .receipt p {
+  margin-bottom: 1rem;
 }
 main .card .receipt img {
   border-radius: 1.25rem;
 }
 main .card .lock {
-  flex: 56%;
-  padding-left: 3.25rem;
-  border-left: 1px solid #353B50;
-  color: #1E2333;
+  flex: calc(55% - 3.25rem);
 }
 main .card .lock h2 {
   font-size: 1.625rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #1E2333;
+}
+main .card .notice {
+  flex: 100%;
+}
+main .card .notice h4 {
+  font-size: 1.375rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+main .card .notice h4:before, main .card .notice h4:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 2em - 1rem);
+  height: 1px;
+  background-color: #353B50;
+  opacity: 0.5;
+}
+main .card .notice h4:before {
+  left: 0;
+}
+main .card .notice h4:after {
+  right: 0;
 }
 main .card.success {
   width: 33rem;
@@ -276,7 +320,7 @@ footer {
   width: 100%;
   border-top: 1px solid #D0D5DD;
   padding: 1.375rem 0;
-  color: #344054;
+  color: #345054;
 }
 footer .copyright {
   width: -moz-max-content;
@@ -393,11 +437,12 @@ footer .copyright strong {
     padding: 2rem;
   }
   main .card .receipt {
-    padding-right: 2.25rem;
-    font-size: calc(((100svw - 6.5rem) * 0.44 - 3rem) * 0.07);
+    flex: 40%;
+    padding: 1.5rem;
+    font-size: calc(((100svw - 6.5rem) * 0.45 - 3rem) * 0.07);
   }
   main .card .lock {
-    padding-left: 2.25rem;
+    flex: calc(60% - 3.25rem);
   }
 }
 @media screen and (max-width: 516px) {
@@ -429,24 +474,24 @@ footer .copyright strong {
     padding: 1.25rem;
     border-radius: 2rem;
     margin: 3.56rem 0 1.25rem;
+    gap: 1.25rem;
   }
   main .card .receipt {
     font-size: calc((100svw - 5rem) * 0.06);
-    padding: 0;
-    padding-bottom: 1.25rem;
+    padding: 1.25rem;
   }
   main .card .receipt img {
     max-width: 13rem;
   }
-  main .card .lock {
-    padding: 0;
-    padding-top: 1.25rem;
-    border-left: none;
-    border-top: 1px solid #353B50;
-  }
   main .card .lock h2 {
     margin: 0;
-    font-size: 1.125rem;
+    font-size: calc((100svw - 5rem) * 0.08);
+  }
+  main .card .notice {
+    padding-top: 1.25rem;
+  }
+  main .card .notice h4 {
+    font-size: 1.25rem;
   }
   main .card.success {
     width: calc(100svw - 2.5rem);
