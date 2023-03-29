@@ -478,6 +478,9 @@ footer .copyright strong {
   main .card .confirm h4 {
     font-size: 1.25rem;
   }
+  main .card .notice {
+    padding-top: 1.25rem;
+  }
   main .card.success {
     width: calc(100svw - 2.5rem);
     gap: 1.5rem;
