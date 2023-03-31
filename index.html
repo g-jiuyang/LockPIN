@@ -17,7 +17,7 @@
     </header>
 
     <main>
-        <section class="card">
+        <div class="main-content">
             <div class="receipt">
                 <p>❗️請備妥點數商品資料❗️</p>
                 <img src="images/receipt.jpg">
@@ -28,11 +28,12 @@
                 <form action="javascript:void(0);">
                     <label>
                         <span>序號</span>
-                        <input type="text" name="sn" placeholder="請輸入序號">
+                        <input type="text" name="sn" placeholder="請輸入序號" autocomplete="off">
                     </label>
                     <label>
-                        <span>PIN 碼</span>
-                        <input type="text" name="pin" placeholder="請輸入PIN碼">
+                        <span>儲值密碼</span>
+                        <input type="text" name="pin" placeholder="請輸入儲值密碼" autocomplete="off">
+                        <span class="note">儲值密碼為14、20或21碼英數字組合</span>
                     </label>
                     <div class="confirm">
                         <span>* 鎖定失敗：點數已被使用，無法鎖定</span>
@@ -45,7 +46,7 @@
             <div class="notice">
                 <h4>注意事項</h4>
                 <p>
-                    點數商品一經鎖定將無法再進行使用，請於原購買店家可退貨期間內，儘速攜帶購買憑證及商品前往辦理退費。<br><br>
+                    點數商品一經鎖定將無法再進行使用，請於原購買店家可退貨期間內，儘速攜帶購買憑證(發票)及商品(小白單)前往辦理退費。<br><br>
                     【 詐騙處理流程 】
                 </p>
                 <ol>
@@ -55,7 +56,7 @@
                     <li>待案件司法終局判決後，本公司將依判決結果進行處理。</li>
                 </ol>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
@@ -70,7 +71,7 @@
             <button id="confirm--close" class="popUp--close"><img src="images/icon-minus.svg"></button>
             <h2>請注意</h2>
             <div class="popUp--content">
-                <p>點數商品一經鎖定則無法再進行使用，您僅可攜帶購買憑證及證明至原購買地點辦理退費。</p>
+                <p>點數商品一經鎖定將無法再進行使用，請於原購買店家可退貨期間內，儘速攜帶購買 <strong>憑證(發票)</strong> 及 <strong>商品(小白單)</strong> 前往辦理退費。</p>
             </div>
             <button id="confirm--submit" class="submit" onclick="location.href='success.html'">確認鎖定</button>
         </div>

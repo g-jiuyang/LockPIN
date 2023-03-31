@@ -130,11 +130,16 @@ button {
   line-height: 160%;
   color: #353B50;
   font-family: "PingFang", Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   background-color: #F6F6F6;
   margin: 0;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -182,14 +187,20 @@ form label {
 form label span {
   flex: 100%;
 }
+form label span.note {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #353B50;
+  opacity: 0.5;
+}
 form label input {
   flex: 100%;
   background-color: #F6F6F6;
   border: 1px solid #DDDDDD;
   border-radius: 50rem;
-  padding: 0 1rem;
-  font-size: 1rem;
-  line-height: 3rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.4rem;
   outline: none;
 }
 form label input::-moz-placeholder {
@@ -212,126 +223,6 @@ form .confirm span {
 }
 form .confirm button {
   margin-top: 0.5rem;
-}
-
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #FFFFFF;
-  padding: 1.25rem;
-}
-header img {
-  height: 2rem;
-}
-
-main {
-  padding-top: 4.8rem;
-  min-height: calc(100svh - 5.25rem);
-}
-main .card {
-  background-color: #FFFFFF;
-  border-radius: 2.5rem;
-  width: 56rem;
-  padding: 2.5rem 3.75rem;
-  margin: 4.5rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem 3.25rem;
-  align-items: center;
-}
-main .card .receipt {
-  flex: 45%;
-  text-align: center;
-  font-size: 1.25rem;
-  color: #353B50;
-  padding: 2rem;
-  background-color: #F6F6F6;
-  border-radius: 1.25rem;
-}
-main .card .receipt p {
-  margin-bottom: 1rem;
-}
-main .card .receipt img {
-  border-radius: 1.25rem;
-}
-main .card .lock {
-  flex: calc(55% - 3.25rem);
-}
-main .card .lock h2 {
-  font-size: 1.625rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1E2333;
-}
-main .card .notice {
-  flex: 100%;
-}
-main .card .notice h4 {
-  font-size: 1.375rem;
-  text-align: center;
-  position: relative;
-  margin-bottom: 1rem;
-}
-main .card .notice h4:before, main .card .notice h4:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: calc(50% - 2em - 1rem);
-  height: 1px;
-  background-color: #353B50;
-  opacity: 0.5;
-}
-main .card .notice h4:before {
-  left: 0;
-}
-main .card .notice h4:after {
-  right: 0;
-}
-main .card.success {
-  width: 33rem;
-  flex-wrap: wrap;
-  gap: 3.25rem;
-  color: #353B50;
-}
-main .card.success > * {
-  flex: 100%;
-}
-main .card.success h2 {
-  margin: 0 0 1.25rem 0;
-  color: #1E2333;
-  font-size: 1.625rem;
-}
-main .card.success h3 {
-  font-size: 1.25rem;
-  margin: 0 0 1.25rem 0;
-}
-main .card.success p {
-  font-size: 1.25rem;
-  line-height: 2.125rem;
-  margin: 0;
-}
-main .card.success p strong {
-  font-weight: 700;
-  color: #E72E6B;
-}
-
-footer {
-  width: 100%;
-  border-top: 1px solid #D0D5DD;
-  padding: 1.375rem 0;
-  color: #345054;
-}
-footer .copyright {
-  width: -moz-max-content;
-  width: max-content;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 0.75rem;
-}
-footer .copyright strong {
-  font-weight: 700;
 }
 
 .popUp {
@@ -394,6 +285,10 @@ footer .copyright strong {
   margin: 0;
   font-size: 0.875rem;
 }
+.popUp .popUp--container .popUp--content strong {
+  color: #E72E6B;
+  font-weight: 700;
+}
 .popUp .popUp--container .popUp--content::-webkit-scrollbar {
   border-radius: 0.125rem;
   background-color: #DDDDDD;
@@ -414,9 +309,155 @@ footer .copyright strong {
   max-height: calc(80svh - 216px);
 }
 
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem;
+}
+header img {
+  height: 2rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 5.75rem 1.25rem;
+}
+main .main-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 48.5rem;
+  margin: 0 auto;
+  gap: 2.5rem 0;
+}
+main .main-content .receipt {
+  flex: 45%;
+  max-width: 20rem;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #353B50;
+  padding: 1.25rem;
+  background-color: #FFFFFF;
+  border-radius: 1.25rem;
+}
+main .main-content .receipt p {
+  margin-bottom: 1rem;
+}
+main .main-content .receipt img {
+  border-radius: 1.25rem;
+}
+main .main-content .lock {
+  flex: calc(55% - 3.25rem);
+  padding-left: 3.25rem;
+}
+main .main-content .lock h2 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #1E2333;
+}
+main .main-content .notice {
+  flex: 100%;
+}
+main .main-content .notice h4 {
+  font-size: 1.375rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+main .main-content .notice h4:before, main .main-content .notice h4:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 2em - 1rem);
+  height: 1px;
+  background-color: #353B50;
+  opacity: 0.5;
+}
+main .main-content .notice h4:before {
+  left: 0;
+}
+main .main-content .notice h4:after {
+  right: 0;
+}
+main .card {
+  background-color: #FFFFFF;
+  border-radius: 2.5rem;
+  width: 56rem;
+  padding: 2.5rem 3.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem 3.25rem;
+  align-items: center;
+  width: 33rem;
+  flex-wrap: wrap;
+  gap: 3.25rem;
+  color: #353B50;
+}
+main .card > * {
+  flex: 100%;
+}
+main .card h2 {
+  margin: 0 0 1.25rem 0;
+  color: #1E2333;
+  font-size: 1.625rem;
+}
+main .card h3 {
+  font-size: 1.25rem;
+  margin: 0 0 1.25rem 0;
+}
+main .card p {
+  font-size: 1.25rem;
+  line-height: 2.125rem;
+  margin: 0;
+}
+main .card p strong {
+  font-weight: 700;
+  color: #E72E6B;
+}
+main .comingsoon {
+  text-align: center;
+}
+main .comingsoon img {
+  width: 16rem;
+}
+main .comingsoon h2 {
+  margin: 4rem 0 1rem;
+  font-size: 1.625rem;
+}
+
+footer {
+  width: 100%;
+  border-top: 1px solid #D0D5DD;
+  padding: 1.375rem 0;
+  color: #345054;
+}
+footer .copyright {
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.75rem;
+}
+footer .copyright strong {
+  font-weight: 700;
+}
+
 @media screen and (max-width: 960px) {
+  header img {
+    height: 1.375rem;
+  }
   main {
-    padding: 4.8rem 1.25rem;
+    padding: 3.75rem 2rem;
+  }
+  main .main-content .lock {
+    padding-left: 2.5rem;
   }
   main .card {
     width: 100%;
@@ -448,11 +489,59 @@ footer .copyright strong {
   form .submit {
     margin-top: 1.5rem;
   }
+  .popUp .popUp--container {
+    width: calc(100svw - 2.5rem);
+    padding: 2rem 1.25rem 1.25rem;
+  }
+  .popUp .popUp--container .popUp--close {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+  .popUp .popUp--container .popUp--content {
+    margin-right: -1rem;
+    padding-right: 1rem;
+    max-height: calc(80svh - 7rem);
+  }
+  .popUp .popUp--container .popUp--content p {
+    font-size: 1rem;
+  }
+  .popUp .popUp--container h2 {
+    margin: 0 0 1.25rem 0;
+  }
+  .popUp .popUp--container .popUp--submit {
+    margin: 1.25rem 0 0 0;
+    font-size: 1rem;
+  }
+  .popUp__button .popUp--container .popUp--content {
+    max-height: calc(80svh - 11.5rem);
+  }
   header img {
     height: 1.25rem;
   }
   main {
-    padding: 1.75rem 1.25rem;
+    padding: 4.25rem 1.25rem;
+  }
+  main .main-content {
+    gap: 1.25rem 0;
+  }
+  main .main-content .receipt {
+    max-width: 100svw;
+  }
+  main .main-content .receipt p {
+    font-size: 1.125rem;
+  }
+  main .main-content .receipt img {
+    max-width: 13rem;
+  }
+  main .main-content .lock {
+    padding-left: 0;
+  }
+  main .main-content .lock h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  main .main-content .notice {
+    padding-top: 1.25rem;
   }
   main .card {
     flex-wrap: wrap;
@@ -493,30 +582,8 @@ footer .copyright strong {
     font-size: 1rem;
     line-height: 160%;
   }
-  .popUp .popUp--container {
-    width: calc(100svw - 2.5rem);
-    padding: 2rem 1.25rem 1.25rem;
-  }
-  .popUp .popUp--container .popUp--close {
-    top: 1.25rem;
-    right: 1.25rem;
-  }
-  .popUp .popUp--container .popUp--content {
-    margin-right: -1rem;
-    padding-right: 1rem;
-    max-height: calc(80svh - 7rem);
-  }
-  .popUp .popUp--container .popUp--content p {
-    font-size: 1rem;
-  }
-  .popUp .popUp--container h2 {
-    margin: 0 0 1.25rem 0;
-  }
-  .popUp .popUp--container .popUp--submit {
-    margin: 1.25rem 0 0 0;
-    font-size: 1rem;
-  }
-  .popUp__button .popUp--container .popUp--content {
-    max-height: calc(80svh - 11.5rem);
+  main .comingsoon h2 {
+    margin-top: 2.75rem;
+    font-size: 7.8svw;
   }
 }
