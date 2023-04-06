@@ -342,7 +342,7 @@ main .main-content .receipt {
   text-align: center;
   font-size: 1.25rem;
   color: #353B50;
-  margin-left: 4rem;
+  margin-left: 3rem;
   padding: 1.25rem;
   background-color: #FFFFFF;
   border-radius: 1.25rem;
@@ -355,7 +355,7 @@ main .main-content .receipt img {
 }
 main .main-content .lock {
   flex: calc(55% - 3.25rem);
-  margin-right: 4rem;
+  margin-right: 3rem;
   padding-left: 3.25rem;
 }
 main .main-content .lock h2 {
@@ -377,16 +377,16 @@ main .main-content .notice h4:before, main .main-content .notice h4:after {
   content: "";
   position: absolute;
   top: 50%;
-  width: calc(50% - 5em - 5rem);
+  width: calc(50% - 5em - 4rem);
   height: 1px;
   background-color: #353B50;
   opacity: 0.5;
 }
 main .main-content .notice h4:before {
-  left: 4rem;
+  left: 3rem;
 }
 main .main-content .notice h4:after {
-  right: 4rem;
+  right: 3rem;
 }
 main .main-content .notice ul {
   display: flex;
@@ -399,15 +399,17 @@ main .main-content .notice ul li {
   width: 16rem;
 }
 main .main-content .notice ul li span {
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   border: 1px solid #353B50;
   border-radius: 1rem;
   font-weight: 700;
   font-size: 0.75rem;
+  line-height: 160%;
 }
 main .main-content .notice ul li img {
   display: block;
   margin: 0.5rem auto;
+  max-width: 7rem;
 }
 main .main-content .notice ul li h6 {
   font-size: 1.375rem;
