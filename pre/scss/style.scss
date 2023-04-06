@@ -381,7 +381,7 @@ main {
         align-items: center;
         width: 33rem;
         flex-wrap: wrap;
-        gap: 3.25rem;
+        gap: 1.75rem;
         color: map-get($color, primary-light);
 
         >* {
@@ -400,8 +400,6 @@ main {
         }
 
         p {
-            font-size: 1.25rem;
-            line-height: 2.125rem;
             margin: 0;
 
             strong {

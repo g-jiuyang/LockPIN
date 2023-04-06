@@ -445,7 +445,7 @@ main .card {
   align-items: center;
   width: 33rem;
   flex-wrap: wrap;
-  gap: 3.25rem;
+  gap: 1.75rem;
   color: #353B50;
 }
 main .card > * {
@@ -461,8 +461,6 @@ main .card h3 {
   margin: 0 0 1.25rem 0;
 }
 main .card p {
-  font-size: 1.25rem;
-  line-height: 2.125rem;
   margin: 0;
 }
 main .card p strong {
