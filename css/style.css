@@ -629,6 +629,7 @@ footer .copyright strong {
     flex-wrap: wrap;
     gap: 2.5rem;
     margin-bottom: 3.25rem;
+    padding-top: 1rem;
   }
   main .main-content .notice ul li {
     flex: 100%;
