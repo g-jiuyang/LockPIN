@@ -325,14 +325,14 @@ main {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  padding: 5.75rem 1.25rem 3.75rem;
+  padding: 5.75rem 1.25rem;
 }
 main .main-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 56rem;
+  width: 48.5rem;
   margin: 0 auto;
   gap: 2.5rem 0;
 }
@@ -342,7 +342,6 @@ main .main-content .receipt {
   text-align: center;
   font-size: 1.25rem;
   color: #353B50;
-  margin-left: 4rem;
   padding: 1.25rem;
   background-color: #FFFFFF;
   border-radius: 1.25rem;
@@ -355,7 +354,6 @@ main .main-content .receipt img {
 }
 main .main-content .lock {
   flex: calc(55% - 3.25rem);
-  margin-right: 4rem;
   padding-left: 3.25rem;
 }
 main .main-content .lock h2 {
@@ -371,66 +369,22 @@ main .main-content .notice h4 {
   font-size: 1.375rem;
   text-align: center;
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 main .main-content .notice h4:before, main .main-content .notice h4:after {
   content: "";
   position: absolute;
   top: 50%;
-  width: calc(50% - 5em - 5rem);
+  width: calc(50% - 2em - 1rem);
   height: 1px;
   background-color: #353B50;
   opacity: 0.5;
 }
 main .main-content .notice h4:before {
-  left: 4rem;
+  left: 0;
 }
 main .main-content .notice h4:after {
-  right: 4rem;
-}
-main .main-content .notice ul {
-  display: flex;
-  justify-content: space-between;
-  gap: 2.5rem;
-  margin-bottom: 3rem;
-}
-main .main-content .notice ul li {
-  text-align: center;
-  width: 16rem;
-}
-main .main-content .notice ul li span {
-  padding: 0.25rem 1rem;
-  border: 1px solid #353B50;
-  border-radius: 1rem;
-  font-weight: 700;
-  font-size: 0.75rem;
-}
-main .main-content .notice ul li img {
-  display: block;
-  margin: 0.5rem auto;
-}
-main .main-content .notice ul li h6 {
-  font-size: 1.375rem;
-  margin-bottom: 0.5rem;
-}
-main .main-content .notice ul li strong {
-  font-weight: 700;
-  color: #E72E6B;
-}
-main .main-content .notice .announce {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main .main-content .notice .announce p {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: -moz-max-content;
-  width: max-content;
-  background-color: #FFFFFF;
-  border-radius: 0.375rem;
-  padding: 0.75rem 1rem;
+  right: 0;
 }
 main .card {
   background-color: #FFFFFF;
@@ -502,30 +456,8 @@ footer .copyright strong {
   main {
     padding: 3.75rem 2rem;
   }
-  main .main-content {
-    width: calc(100svw - 2.5rem);
-  }
-  main .main-content .receipt {
-    margin-left: 0;
-  }
   main .main-content .lock {
     padding-left: 2.5rem;
-    margin-right: 0;
-  }
-  main .main-content .notice {
-    width: calc(100svw - 2.5rem);
-  }
-  main .main-content .notice h4:before, main .main-content .notice h4:after {
-    width: calc(50% - 5em - 2rem);
-  }
-  main .main-content .notice h4:before {
-    left: 1rem;
-  }
-  main .main-content .notice h4:after {
-    right: 1rem;
-  }
-  main .main-content .notice ul {
-    gap: 1.5rem;
   }
   main .card {
     width: 100%;
@@ -587,7 +519,7 @@ footer .copyright strong {
     height: 1.25rem;
   }
   main {
-    padding: 4.25rem 1.25rem 2.5rem;
+    padding: 4.25rem 1.25rem;
   }
   main .main-content {
     gap: 1.25rem 0;
@@ -611,69 +543,46 @@ footer .copyright strong {
   main .main-content .notice {
     padding-top: 1.25rem;
   }
-  main .main-content .notice h4 {
-    margin-bottom: 1.25rem;
-  }
-  main .main-content .notice h4:before, main .main-content .notice h4:after {
-    width: calc(50% - 5em - 1rem);
-  }
-  main .main-content .notice h4:before {
-    left: 0;
-  }
-  main .main-content .notice h4:after {
-    right: 0;
-  }
-  main .main-content .notice ul {
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    margin-bottom: 3.25rem;
-  }
-  main .main-content .notice ul li {
-    flex: 100%;
-  }
-  main .main-content .notice .announce p {
-    align-items: flex-start;
-  }
-  main .main-content .card {
+  main .card {
     flex-wrap: wrap;
     padding: 1.25rem;
     border-radius: 2rem;
     margin: 3.56rem 0 1.25rem;
     gap: 1.25rem;
   }
-  main .main-content .card .receipt {
+  main .card .receipt {
     font-size: calc((100svw - 5rem) * 0.06);
     padding: 1.25rem;
   }
-  main .main-content .card .receipt img {
+  main .card .receipt img {
     max-width: 13rem;
   }
-  main .main-content .card .lock h2 {
+  main .card .lock h2 {
     margin: 0;
     font-size: calc((100svw - 5rem) * 0.08);
   }
-  main .main-content .card .confirm {
+  main .card .confirm {
     margin-top: 1.5rem;
   }
-  main .main-content .card .confirm h4 {
+  main .card .confirm h4 {
     font-size: 1.25rem;
   }
-  main .main-content .card .notice {
+  main .card .notice {
     padding-top: 1.25rem;
   }
-  main .main-content .card.success {
+  main .card.success {
     width: calc(100svw - 2.5rem);
     gap: 1.5rem;
   }
-  main .main-content .card.success h2,
-  main .main-content .card.success h3 {
+  main .card.success h2,
+  main .card.success h3 {
     font-size: 1.25rem;
   }
-  main .main-content .card.success p {
+  main .card.success p {
     font-size: 1rem;
     line-height: 160%;
   }
-  main .main-content .comingsoon h2 {
+  main .comingsoon h2 {
     margin-top: 2.75rem;
     font-size: 1.5rem;
   }
