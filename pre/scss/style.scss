@@ -323,7 +323,7 @@ main {
 
                 li {
                     text-align: center;
-                    width: 16rem;
+                    flex: 16.5rem;
 
                     span {
                         padding: 0.5rem 1rem;
@@ -509,7 +509,7 @@ footer {
 }
 
 
-@media screen and (max-width:516px) {
+@media screen and (max-width:768px) {
 
     // components
     form {
@@ -586,7 +586,7 @@ footer {
             gap: 1.25rem 0;
 
             .receipt {
-                max-width: 100svw;
+                flex: 100svw;
 
                 p {
                     font-size: 1.125rem;
@@ -598,6 +598,7 @@ footer {
             }
 
             .lock {
+                flex: 100svw;
                 padding-left: 0;
 
                 h2 {
@@ -634,6 +635,10 @@ footer {
 
                     li {
                         flex: 100%;
+
+                        br {
+                            display: none;
+                        }
                     }
                 }
 
